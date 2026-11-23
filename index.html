@@ -1,490 +1,1182 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Amanda | Portfolio</title>
-    <meta name="description" content="Amanda's personal portfolio showcasing UI/UX design, web development and creative projects.">
+    <title>Amanda | UI/UX Designer & Developer</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description"
+        content="Amanda's portfolio — exploring the intersection of design, technology and meaningful digital experiences.">
+
+    <meta name="theme-color" content="#FAF6F0">
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+        rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
+    <!-- ================= PRELOADER ================= -->
+
+    <div class="preloader" id="preloader">
+        <span class="preloader-name">amanda.</span>
+        <span class="preloader-caption">A little creativity in progress...</span>
+    </div>
+
+
     <!-- ================= NAVIGATION ================= -->
-    <nav class="navbar navbar-expand-lg sticky-top">
+
+    <nav class="navbar navbar-expand-lg site-navbar" id="siteNavbar">
+
         <div class="container">
 
-            <a class="navbar-brand" href="#home">amanda<span>.</span></a>
+            <a class="navbar-brand brand-logo" href="#home">
+                amanda<span>.</span>
+            </a>
 
-            <button class="navbar-toggler" type="button"
+            <button
+                class="navbar-toggler"
+                type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar"
+                data-bs-target="#navbarContent"
+                aria-controls="navbarContent"
                 aria-expanded="false"
                 aria-label="Toggle navigation">
+
                 <i class="bi bi-list"></i>
+
             </button>
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
+            <div class="collapse navbar-collapse" id="navbarContent">
+
                 <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+
                     <li class="nav-item">
-                        <a class="nav-link contact-nav" href="#contact">Let's Talk ↗</a>
+                        <a class="nav-link active" href="#home">Home</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work">Work</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#journey">Journey</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-contact" href="#contact">
+                            Let's talk <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
 
         </div>
+
     </nav>
 
 
-    <!-- ================= HOME / HERO ================= -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center min-vh-100">
+    <main>
 
-                <div class="col-lg-7 hero-content reveal">
+        <!-- ================= HERO ================= -->
 
-                    <p class="section-label">
-                        <span class="status-dot"></span>
-                        AVAILABLE FOR INTERNSHIP · 2027
-                    </p>
+        <section class="hero-section" id="home">
 
-                    <h1>
-                        Designing with
-                        <span class="highlight-text">purpose.</span>
-                        <br>
-                        Building with
-                        <span class="highlight-text">curiosity.</span>
-                    </h1>
+            <div class="container hero-container">
 
-                    <p class="hero-description">
-                        Hi, I'm Amanda! A Diploma in Information Technology
-                        student passionate about creating meaningful digital
-                        experiences through design and technology.
-                    </p>
+                <div class="row align-items-center">
 
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn-primary-custom">
-                            Explore My Work <i class="bi bi-arrow-up-right"></i>
-                        </a>
+                    <div class="col-lg-7">
 
-                        <a href="#about" class="btn-outline-custom">
-                            Get to Know Me
-                        </a>
+                        <div class="hero-content" data-reveal>
+
+                            <div class="availability-label">
+                                <span class="availability-dot"></span>
+                                EXPLORING OPPORTUNITIES · 2027
+                            </div>
+
+                            <p class="hero-eyebrow">
+                                HELLO, I'M AMANDA
+                            </p>
+
+                            <h1 class="hero-title">
+                                Creating with
+                                <span class="serif-italic">purpose.</span>
+                                <br>
+                                Designing with
+                                <span class="serif-italic">curiosity.</span>
+                            </h1>
+
+                            <p class="hero-description">
+                                I'm an Information Technology student with
+                                a passion for UI/UX design and software
+                                development. I enjoy turning ideas into
+                                thoughtful, meaningful digital experiences.
+                            </p>
+
+                            <div class="hero-actions">
+
+                                <a href="#work" class="button-primary">
+                                    Explore my work
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+
+                                <a href="#about" class="button-secondary">
+                                    Get to know me
+                                </a>
+
+                            </div>
+
+                            <div class="hero-meta">
+
+                                <span>BASED IN SINGAPORE</span>
+
+                                <span class="meta-divider"></span>
+
+                                <span>DESIGN · TECHNOLOGY · CREATIVITY</span>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div class="hero-socials">
-                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
-                        <span class="social-divider"></span>
-                        <span>Singapore</span>
+
+                    <!-- HERO VISUAL -->
+
+                    <div class="col-lg-5">
+
+                        <div class="hero-visual" data-reveal>
+
+                            <div class="hero-photo-frame">
+
+                                <div class="hero-photo-placeholder">
+
+                                    <i class="bi bi-image"></i>
+
+                                    <span>
+                                        YOUR PHOTO GOES HERE
+                                    </span>
+
+                                </div>
+
+                                <div class="photo-caption">
+                                    A LITTLE BIT OF ME ✳
+                                </div>
+
+                            </div>
+
+                            <div class="hero-sticker sticker-one">
+                                <i class="bi bi-stars"></i>
+                                Always creating
+                            </div>
+
+                            <div class="hero-sticker sticker-two">
+                                <span>✳</span>
+                                Learning as I go
+                            </div>
+
+                            <div class="hero-star">✳</div>
+
+                        </div>
+
                     </div>
 
                 </div>
 
-                <div class="col-lg-5 hero-visual reveal">
-                    <div class="hero-image-frame">
-                        <div class="hero-image-placeholder">
-                            <i class="bi bi-person"></i>
-                            <p>Add your portrait here</p>
-                        </div>
+                <div class="hero-scroll">
 
-                        <div class="floating-note note-top">
-                            <i class="bi bi-stars"></i>
-                            Creative thinker
-                        </div>
+                    <span>SCROLL TO DISCOVER</span>
 
-                        <div class="floating-note note-bottom">
-                            <i class="bi bi-heart"></i>
-                            Always learning
-                        </div>
-                    </div>
+                    <i class="bi bi-arrow-down"></i>
 
-                    <div class="hero-decoration">✳</div>
                 </div>
 
             </div>
-        </div>
 
-        <div class="hero-bottom-text">
-            <span>SCROLL TO EXPLORE</span>
-            <i class="bi bi-arrow-down"></i>
-        </div>
-    </section>
+        </section>
 
 
-    <!-- ================= ABOUT ================= -->
-    <section id="about" class="section-padding">
-        <div class="container">
+        <!-- ================= INTRODUCTION STRIP ================= -->
 
-            <div class="row align-items-center g-5">
+        <section class="intro-strip">
 
-                <div class="col-lg-5 reveal">
-                    <p class="section-label">01 — A LITTLE ABOUT ME</p>
+            <div class="container">
+
+                <p>
+                    A curious mind, a creative heart, and a love for
+                    building things that matter.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURED WORK ================= -->
+
+        <section class="work-section section-padding" id="work">
+
+            <div class="container">
+
+                <div class="section-header" data-reveal>
+
+                    <div>
+                        <span class="section-eyebrow">01 — SELECTED WORK</span>
+
+                        <h2 class="section-title">
+                            Ideas brought
+                            <span class="serif-italic">to life.</span>
+                        </h2>
+                    </div>
+
+                    <p class="section-description">
+                        A collection of projects where creativity,
+                        problem-solving and technology come together.
+                    </p>
+
+                </div>
+
+
+                <!-- PROJECT FILTERS -->
+
+                <div class="project-filters" data-reveal>
+
+                    <button class="filter-btn active" data-filter="all">
+                        All projects
+                    </button>
+
+                    <button class="filter-btn" data-filter="design">
+                        UI/UX design
+                    </button>
+
+                    <button class="filter-btn" data-filter="development">
+                        Development
+                    </button>
+
+                </div>
+
+
+                <!-- PROJECT GRID -->
+
+                <div class="row g-4 project-grid">
+
+
+                    <!-- PAWSTORY -->
+
+                    <div class="col-lg-6 project-item" data-category="design">
+
+                        <article class="project-card" data-reveal>
+
+                            <a href="projects/pawstory.html"
+                                class="project-visual pawstory-visual"
+                                aria-label="View PawStory project">
+
+                                <span class="project-index">01 / 04</span>
+
+                                <div class="project-artwork pawstory-artwork">
+                                    <i class="bi bi-book-half"></i>
+                                    <span>PAWSTORY</span>
+                                    <small>Every pet has a story.</small>
+                                </div>
+
+                                <span class="project-view">
+                                    View project
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </span>
+
+                            </a>
+
+                            <div class="project-information">
+
+                                <div>
+                                    <span class="project-type">UI/UX DESIGN</span>
+                                    <h3>PawStory</h3>
+                                    <p>
+                                        Bringing pet lovers together through
+                                        community, shared stories and adoption.
+                                    </p>
+                                </div>
+
+                                <span class="project-year">2026</span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- COLLAB AI -->
+
+                    <div class="col-lg-6 project-item" data-category="development">
+
+                        <article class="project-card" data-reveal>
+
+                            <a href="projects/collab-ai.html"
+                                class="project-visual collab-visual"
+                                aria-label="View Collab AI project">
+
+                                <span class="project-index">02 / 04</span>
+
+                                <div class="project-artwork collab-artwork">
+                                    <i class="bi bi-people"></i>
+                                    <span>COLLAB AI</span>
+                                    <small>Better ideas, together.</small>
+                                </div>
+
+                                <span class="project-view">
+                                    View project
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </span>
+
+                            </a>
+
+                            <div class="project-information">
+
+                                <div>
+                                    <span class="project-type">WEB DEVELOPMENT</span>
+                                    <h3>Collab AI</h3>
+                                    <p>
+                                        An AI-assisted collaboration platform
+                                        for more organised group projects.
+                                    </p>
+                                </div>
+
+                                <span class="project-year">2026</span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- HEARTSPACE -->
+
+                    <div class="col-lg-6 project-item" data-category="design">
+
+                        <article class="project-card" data-reveal>
+
+                            <a href="projects/heartspace.html"
+                                class="project-visual heartspace-visual"
+                                aria-label="View HeartSpace project">
+
+                                <span class="project-index">03 / 04</span>
+
+                                <div class="project-artwork heartspace-artwork">
+                                    <i class="bi bi-flower1"></i>
+                                    <span>HEARTSPACE</span>
+                                    <small>A space to reconnect.</small>
+                                </div>
+
+                                <span class="project-view">
+                                    View project
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </span>
+
+                            </a>
+
+                            <div class="project-information">
+
+                                <div>
+                                    <span class="project-type">WEB DESIGN</span>
+                                    <h3>HeartSpace</h3>
+                                    <p>
+                                        A wellbeing platform concept exploring
+                                        mental wellness and self-discovery.
+                                    </p>
+                                </div>
+
+                                <span class="project-year">2025</span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- FOURTH PROJECT -->
+
+                    <div class="col-lg-6 project-item" data-category="development">
+
+                        <article class="project-card" data-reveal>
+
+                            <a href="projects/project-four.html"
+                                class="project-visual fourth-visual"
+                                aria-label="View fourth project">
+
+                                <span class="project-index">04 / 04</span>
+
+                                <div class="project-artwork fourth-artwork">
+                                    <i class="bi bi-code-square"></i>
+                                    <span>MORE TO COME</span>
+                                    <small>Always building something new.</small>
+                                </div>
+
+                                <span class="project-view">
+                                    View project
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </span>
+
+                            </a>
+
+                            <div class="project-information">
+
+                                <div>
+                                    <span class="project-type">DEVELOPMENT</span>
+                                    <h3>More experiments</h3>
+                                    <p>
+                                        A space for technical experiments,
+                                        learning and new ideas.
+                                    </p>
+                                </div>
+
+                                <span class="project-year">ONGOING</span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS MARQUEE ================= -->
+
+        <section class="marquee-section" id="skills">
+
+            <div class="marquee-heading">
+                <span>MY CREATIVE TOOLKIT</span>
+                <span>✳</span>
+                <span>MY CREATIVE TOOLKIT</span>
+            </div>
+
+            <div class="marquee-track">
+
+                <div class="marquee-content">
+
+                    <span>UI DESIGN</span>
+                    <i>✳</i>
+                    <span>UX DESIGN</span>
+                    <i>✳</i>
+                    <span>FIGMA</span>
+                    <i>✳</i>
+                    <span>HTML & CSS</span>
+                    <i>✳</i>
+                    <span>JAVASCRIPT</span>
+                    <i>✳</i>
+                    <span>BOOTSTRAP</span>
+                    <i>✳</i>
+                    <span>NODE.JS</span>
+                    <i>✳</i>
+                    <span>DATABASE DESIGN</span>
+                    <i>✳</i>
+
+                </div>
+
+                <div class="marquee-content" aria-hidden="true">
+
+                    <span>UI DESIGN</span>
+                    <i>✳</i>
+                    <span>UX DESIGN</span>
+                    <i>✳</i>
+                    <span>FIGMA</span>
+                    <i>✳</i>
+                    <span>HTML & CSS</span>
+                    <i>✳</i>
+                    <span>JAVASCRIPT</span>
+                    <i>✳</i>
+                    <span>BOOTSTRAP</span>
+                    <i>✳</i>
+                    <span>NODE.JS</span>
+                    <i>✳</i>
+                    <span>DATABASE DESIGN</span>
+                    <i>✳</i>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="about-section section-padding" id="about">
+
+            <div class="container">
+
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-5" data-reveal>
+
+                        <span class="section-eyebrow">02 — BEHIND THE SCREENS</span>
+
+                        <h2 class="section-title">
+                            The person
+                            <span class="serif-italic">behind</span>
+                            the pixels.
+                        </h2>
+
+                        <div class="about-photo-placeholder">
+                            <i class="bi bi-camera"></i>
+                            <span>YOUR PHOTO / CREATIVE COLLAGE</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-7" data-reveal>
+
+                        <div class="about-copy">
+
+                            <span class="about-greeting">
+                                A LITTLE INTRODUCTION ✳
+                            </span>
+
+                            <h3>
+                                I enjoy understanding how things work
+                                and finding ways to make them better.
+                            </h3>
+
+                            <p>
+                                I'm currently pursuing a Diploma in
+                                Information Technology at Singapore
+                                Polytechnic, where I explore the
+                                intersection of design and technology.
+                            </p>
+
+                            <p>
+                                I am particularly interested in UI/UX
+                                design and software development. I enjoy
+                                approaching problems from a user's
+                                perspective, experimenting with ideas
+                                and bringing concepts to life through code.
+                            </p>
+
+                            <p>
+                                Beyond technology, I value creativity,
+                                continuous learning and working with people.
+                                Every project is an opportunity to discover
+                                something new.
+                            </p>
+
+                            <div class="about-facts">
+
+                                <div>
+                                    <span>EDUCATION</span>
+                                    <strong>Singapore Polytechnic</strong>
+                                </div>
+
+                                <div>
+                                    <span>STUDYING</span>
+                                    <strong>Diploma in IT</strong>
+                                </div>
+
+                                <div>
+                                    <span>INTERESTS</span>
+                                    <strong>Design & Development</strong>
+                                </div>
+
+                                <div>
+                                    <span>LOCATION</span>
+                                    <strong>Singapore</strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CAPABILITIES ================= -->
+
+        <section class="capabilities-section section-padding">
+
+            <div class="container">
+
+                <div class="section-header" data-reveal>
+
+                    <div>
+                        <span class="section-eyebrow">03 — WHAT I WORK WITH</span>
+
+                        <h2 class="section-title">
+                            A mix of logic
+                            <span class="serif-italic">& creativity.</span>
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="row g-3">
+
+                    <div class="col-md-4" data-reveal>
+
+                        <div class="capability-card">
+
+                            <span class="capability-number">01</span>
+
+                            <i class="bi bi-palette2"></i>
+
+                            <h3>Design & Experience</h3>
+
+                            <p>
+                                Creating interfaces that are visually
+                                engaging, intuitive and user-centred.
+                            </p>
+
+                            <div class="capability-tags">
+                                <span>UI Design</span>
+                                <span>UX Design</span>
+                                <span>Figma</span>
+                                <span>Adobe Photoshop</span>
+                                <span>Illustrator</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4" data-reveal>
+
+                        <div class="capability-card">
+
+                            <span class="capability-number">02</span>
+
+                            <i class="bi bi-code-slash"></i>
+
+                            <h3>Development</h3>
+
+                            <p>
+                                Building responsive websites and
+                                functional applications through code.
+                            </p>
+
+                            <div class="capability-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Bootstrap</span>
+                                <span>Node.js</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4" data-reveal>
+
+                        <div class="capability-card">
+
+                            <span class="capability-number">03</span>
+
+                            <i class="bi bi-database"></i>
+
+                            <h3>Technology & Data</h3>
+
+                            <p>
+                                Working with databases, information
+                                systems and technical problem-solving.
+                            </p>
+
+                            <div class="capability-tags">
+                                <span>MySQL</span>
+                                <span>PostgreSQL</span>
+                                <span>Power BI</span>
+                                <span>Database Design</span>
+                                <span>Secure Coding</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= JOURNEY ================= -->
+
+        <section class="journey-section section-padding" id="journey">
+
+            <div class="container">
+
+                <div class="section-header" data-reveal>
+
+                    <div>
+                        <span class="section-eyebrow">04 — MY JOURNEY</span>
+
+                        <h2 class="section-title">
+                            Growing through
+                            <span class="serif-italic">experience.</span>
+                        </h2>
+                    </div>
+
+                    <p class="section-description">
+                        The experiences that have helped shape
+                        the person and learner I am today.
+                    </p>
+
+                </div>
+
+
+                <div class="journey-list">
+
+                    <article class="journey-item" data-reveal>
+
+                        <span class="journey-period">EDUCATION</span>
+
+                        <div>
+                            <h3>Singapore Polytechnic</h3>
+                            <p>Diploma in Information Technology</p>
+                        </div>
+
+                        <span class="journey-category">ACADEMIC</span>
+
+                    </article>
+
+
+                    <article class="journey-item" data-reveal>
+
+                        <span class="journey-period">WORK EXPERIENCE</span>
+
+                        <div>
+                            <h3>Retail & Customer Service</h3>
+                            <p>
+                                Experience at HOOGA, Kiztopia and
+                                F1 event merchandising.
+                            </p>
+                        </div>
+
+                        <span class="journey-category">PROFESSIONAL</span>
+
+                    </article>
+
+
+                    <article class="journey-item" data-reveal>
+
+                        <span class="journey-period">CO-CURRICULAR</span>
+
+                        <div>
+                            <h3>Netball & Sports</h3>
+                            <p>
+                                Years of participation in school
+                                and polytechnic netball.
+                            </p>
+                        </div>
+
+                        <span class="journey-category">PERSONAL GROWTH</span>
+
+                    </article>
+
+
+                    <article class="journey-item" data-reveal>
+
+                        <span class="journey-period">ACHIEVEMENTS</span>
+
+                        <div>
+                            <h3>Academic & Sports Recognition</h3>
+                            <p>
+                                Edusave awards, Jurong West Colours
+                                Award and sports participation.
+                            </p>
+                        </div>
+
+                        <span class="journey-category">RECOGNITION</span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DESIGN PROCESS ================= -->
+
+        <section class="process-section section-padding">
+
+            <div class="container">
+
+                <div class="section-heading text-center" data-reveal>
+
+                    <span class="section-eyebrow">05 — HOW I APPROACH PROJECTS</span>
+
                     <h2 class="section-title">
-                        More than just
-                        <span class="highlight-text">code & pixels.</span>
+                        From an idea
+                        <span class="serif-italic">to reality.</span>
                     </h2>
 
-                    <div class="about-image-placeholder">
-                        <i class="bi bi-image"></i>
-                        <span>Your personal photo or creative collage</span>
-                    </div>
+                    <p>
+                        My approach to learning, creating and solving problems.
+                    </p>
+
                 </div>
 
-                <div class="col-lg-7 reveal">
-                    <div class="about-content">
-                        <p class="about-intro">
-                            I believe great digital experiences begin with
-                            understanding people.
-                        </p>
+
+                <div class="row g-3 process-grid">
+
+                    <div class="col-6 col-lg-3" data-reveal>
+
+                        <div class="process-card">
+                            <span>01</span>
+                            <i class="bi bi-search"></i>
+                            <h3>Discover</h3>
+                            <p>Understand the problem and the people behind it.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-6 col-lg-3" data-reveal>
+
+                        <div class="process-card">
+                            <span>02</span>
+                            <i class="bi bi-lightbulb"></i>
+                            <h3>Explore</h3>
+                            <p>Research, brainstorm and explore possibilities.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-6 col-lg-3" data-reveal>
+
+                        <div class="process-card">
+                            <span>03</span>
+                            <i class="bi bi-pencil-square"></i>
+                            <h3>Create</h3>
+                            <p>Turn ideas into designs and working solutions.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-6 col-lg-3" data-reveal>
+
+                        <div class="process-card">
+                            <span>04</span>
+                            <i class="bi bi-arrow-repeat"></i>
+                            <h3>Improve</h3>
+                            <p>Test, learn and refine the final experience.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FAQ ================= -->
+
+        <section class="faq-section section-padding">
+
+            <div class="container">
+
+                <div class="row g-5">
+
+                    <div class="col-lg-5" data-reveal>
+
+                        <span class="section-eyebrow">06 — A FEW QUESTIONS</span>
+
+                        <h2 class="section-title">
+                            Curious about
+                            <span class="serif-italic">something?</span>
+                        </h2>
 
                         <p>
-                            I'm currently pursuing a Diploma in Information
-                            Technology at Singapore Polytechnic, with a
-                            strong interest in UI/UX design and software
-                            development.
+                            Here are a few things you might want to know
+                            about my background and interests.
                         </p>
 
-                        <p>
-                            I enjoy exploring how creativity and technology
-                            can come together to solve real-world problems.
-                            From designing interfaces to developing
-                            functional applications, I'm always looking
-                            for opportunities to learn and grow.
-                        </p>
+                    </div>
 
-                        <div class="about-details">
-                            <div>
-                                <span class="detail-label">EDUCATION</span>
-                                <strong>Singapore Polytechnic</strong>
+
+                    <div class="col-lg-7" data-reveal>
+
+                        <div class="accordion portfolio-accordion" id="faqAccordion">
+
+
+                            <div class="accordion-item">
+
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faqOne"
+                                        aria-expanded="true">
+
+                                        What are you currently studying?
+
+                                    </button>
+                                </h3>
+
+                                <div id="faqOne"
+                                    class="accordion-collapse collapse show"
+                                    data-bs-parent="#faqAccordion">
+
+                                    <div class="accordion-body">
+                                        I'm pursuing a Diploma in Information
+                                        Technology at Singapore Polytechnic,
+                                        with interests in UI/UX design and
+                                        software development.
+                                    </div>
+
+                                </div>
+
                             </div>
 
-                            <div>
-                                <span class="detail-label">FIELD OF STUDY</span>
-                                <strong>Diploma in Information Technology</strong>
+
+                            <div class="accordion-item">
+
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faqTwo">
+
+                                        What areas interest you most?
+
+                                    </button>
+                                </h3>
+
+                                <div id="faqTwo"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+
+                                    <div class="accordion-body">
+                                        I'm particularly interested in
+                                        designing user-friendly interfaces,
+                                        understanding user needs and
+                                        developing functional digital products.
+                                    </div>
+
+                                </div>
+
                             </div>
 
-                            <div>
-                                <span class="detail-label">INTERESTS</span>
-                                <strong>UI/UX · Development · Design</strong>
+
+                            <div class="accordion-item">
+
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faqThree">
+
+                                        What kind of opportunities are you exploring?
+
+                                    </button>
+                                </h3>
+
+                                <div id="faqThree"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+
+                                    <div class="accordion-body">
+                                        I'm interested in learning through
+                                        industry experience, particularly
+                                        opportunities related to software
+                                        development and UI/UX.
+                                    </div>
+
+                                </div>
+
                             </div>
+
+
+                            <div class="accordion-item">
+
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faqFour">
+
+                                        Where can I see more of your work?
+
+                                    </button>
+                                </h3>
+
+                                <div id="faqFour"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+
+                                    <div class="accordion-body">
+                                        You can explore the featured projects
+                                        on this portfolio. More detailed
+                                        project case studies will be added
+                                        as the website develops.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
                         </div>
 
-                        <a href="#contact" class="text-link">
-                            Let's connect <i class="bi bi-arrow-up-right"></i>
-                        </a>
                     </div>
+
                 </div>
 
             </div>
-        </div>
-    </section>
+
+        </section>
 
 
-    <!-- ================= PROJECTS ================= -->
-    <section id="projects" class="section-padding projects-section">
-        <div class="container">
+        <!-- ================= CONTACT ================= -->
 
-            <div class="section-heading reveal">
-                <p class="section-label">02 — SELECTED WORK</p>
-                <h2 class="section-title">
-                    Things I've <span class="highlight-text">created.</span>
+        <section class="contact-section section-padding" id="contact">
+
+            <div class="container text-center" data-reveal>
+
+                <span class="section-eyebrow">07 — LET'S CONNECT</span>
+
+                <h2 class="contact-title">
+                    Have something
+                    <span class="serif-italic">in mind?</span>
                 </h2>
-                <p>A collection of ideas, experiments and projects I've worked on.</p>
-            </div>
 
-            <!-- Project filters -->
-            <div class="project-filters reveal">
-                <button class="filter-btn active" data-filter="all">All Work</button>
-                <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
-                <button class="filter-btn" data-filter="development">Development</button>
-            </div>
+                <p class="contact-description">
+                    Whether it's an interesting project, a new idea
+                    or an opportunity to connect, I'd love to hear from you.
+                </p>
 
-            <div class="row g-4 project-grid">
+                <a href="mailto:YOUR-EMAIL@example.com"
+                    class="button-primary">
 
-                <!-- Project 1 -->
-                <div class="col-md-6 project-item reveal" data-category="uiux">
-                    <article class="project-card">
-                        <div class="project-image project-pink">
-                            <span class="project-number">01</span>
-                            <i class="bi bi-book-half project-icon"></i>
-                        </div>
+                    Get in touch
+                    <i class="bi bi-arrow-up-right"></i>
 
-                        <div class="project-info">
-                            <span class="project-category">UI/UX DESIGN</span>
-                            <h3>PawStory</h3>
-                            <p>
-                                An animal welfare community concept connecting
-                                pet owners, animal lovers and adoption stories.
-                            </p>
-                            <a href="#" class="project-link">
-                                View Project <i class="bi bi-arrow-up-right"></i>
-                            </a>
-                        </div>
-                    </article>
-                </div>
+                </a>
 
-                <!-- Project 2 -->
-                <div class="col-md-6 project-item reveal" data-category="development">
-                    <article class="project-card">
-                        <div class="project-image project-brown">
-                            <span class="project-number">02</span>
-                            <i class="bi bi-people project-icon"></i>
-                        </div>
+                <div class="contact-socials">
 
-                        <div class="project-info">
-                            <span class="project-category">WEB DEVELOPMENT</span>
-                            <h3>Collab AI</h3>
-                            <p>
-                                An AI-assisted learning and collaboration
-                                platform designed to support group projects.
-                            </p>
-                            <a href="#" class="project-link">
-                                View Project <i class="bi bi-arrow-up-right"></i>
-                            </a>
-                        </div>
-                    </article>
-                </div>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
 
-                <!-- Project 3 -->
-                <div class="col-md-6 project-item reveal" data-category="uiux">
-                    <article class="project-card">
-                        <div class="project-image project-cream">
-                            <span class="project-number">03</span>
-                            <i class="bi bi-flower1 project-icon"></i>
-                        </div>
+                    <a href="#" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
 
-                        <div class="project-info">
-                            <span class="project-category">UI/UX & WEB DESIGN</span>
-                            <h3>HeartSpace</h3>
-                            <p>
-                                A wellness platform concept bringing together
-                                mental wellbeing, movement and self-discovery.
-                            </p>
-                            <a href="#" class="project-link">
-                                View Project <i class="bi bi-arrow-up-right"></i>
-                            </a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="col-md-6 project-item reveal" data-category="development">
-                    <article class="project-card">
-                        <div class="project-image project-rose">
-                            <span class="project-number">04</span>
-                            <i class="bi bi-paw project-icon"></i>
-                        </div>
-
-                        <div class="project-info">
-                            <span class="project-category">SOFTWARE DEVELOPMENT</span>
-                            <h3>PawLink</h3>
-                            <p>
-                                A web application concept focused on animal
-                                rescue, reporting and community support.
-                            </p>
-                            <a href="#" class="project-link">
-                                View Project <i class="bi bi-arrow-up-right"></i>
-                            </a>
-                        </div>
-                    </article>
                 </div>
 
             </div>
-        </div>
-    </section>
 
+        </section>
 
-    <!-- ================= SKILLS ================= -->
-    <section id="skills" class="section-padding">
-        <div class="container">
-
-            <div class="section-heading reveal">
-                <p class="section-label">03 — WHAT I BRING</p>
-                <h2 class="section-title">
-                    My creative <span class="highlight-text">toolkit.</span>
-                </h2>
-                <p>A combination of technical knowledge and creative thinking.</p>
-            </div>
-
-            <div class="row g-4">
-
-                <div class="col-md-4 reveal">
-                    <div class="paper-card skill-card">
-                        <i class="bi bi-palette skill-icon"></i>
-                        <h3>Design</h3>
-                        <p>Creating thoughtful and user-centred experiences.</p>
-                        <div class="skill-tags">
-                            <span>UI Design</span>
-                            <span>UX Design</span>
-                            <span>Figma</span>
-                            <span>Photoshop</span>
-                            <span>Illustrator</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 reveal">
-                    <div class="paper-card skill-card">
-                        <i class="bi bi-code-slash skill-icon"></i>
-                        <h3>Development</h3>
-                        <p>Turning ideas and designs into functional products.</p>
-                        <div class="skill-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Bootstrap</span>
-                            <span>Node.js</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 reveal">
-                    <div class="paper-card skill-card">
-                        <i class="bi bi-database skill-icon"></i>
-                        <h3>Technology</h3>
-                        <p>Working with data, systems and development tools.</p>
-                        <div class="skill-tags">
-                            <span>MySQL</span>
-                            <span>PostgreSQL</span>
-                            <span>Database Design</span>
-                            <span>Power BI</span>
-                            <span>Secure Coding</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ================= EXPERIENCE ================= -->
-    <section id="experience" class="section-padding experience-section">
-        <div class="container">
-
-            <div class="section-heading reveal">
-                <p class="section-label">04 — MY JOURNEY</p>
-                <h2 class="section-title">
-                    Learning beyond the <span class="highlight-text">classroom.</span>
-                </h2>
-            </div>
-
-            <div class="timeline">
-
-                <div class="timeline-item reveal">
-                    <span class="timeline-dot"></span>
-                    <div class="timeline-content">
-                        <span class="project-category">EDUCATION</span>
-                        <h3>Singapore Polytechnic</h3>
-                        <p>Diploma in Information Technology</p>
-                        <span class="timeline-date">Present</span>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <span class="timeline-dot"></span>
-                    <div class="timeline-content">
-                        <span class="project-category">EXPERIENCE</span>
-                        <h3>Retail & Customer Service</h3>
-                        <p>
-                            Experience across retail environments, developing
-                            communication, teamwork and problem-solving skills.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <span class="timeline-dot"></span>
-                    <div class="timeline-content">
-                        <span class="project-category">CO-CURRICULAR</span>
-                        <h3>Netball</h3>
-                        <p>
-                            Participated in school and polytechnic netball
-                            activities, building discipline and teamwork.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ================= CONTACT ================= -->
-    <section id="contact" class="section-padding contact-section">
-        <div class="container text-center reveal">
-
-            <p class="section-label">05 — GET IN TOUCH</p>
-
-            <h2 class="contact-title">
-                Have an idea?
-                <br>
-                <span class="highlight-text">Let's create something.</span>
-            </h2>
-
-            <p class="contact-description">
-                I'm always open to connecting, learning and exploring
-                new opportunities.
-            </p>
-
-            <a href="mailto:YOUR-EMAIL@example.com" class="btn-primary-custom">
-                Say Hello <i class="bi bi-envelope"></i>
-            </a>
-
-            <div class="contact-socials">
-                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
-            </div>
-
-        </div>
-    </section>
+    </main>
 
 
     <!-- ================= FOOTER ================= -->
-    <footer>
+
+    <footer class="site-footer">
+
         <div class="container">
-            <div class="footer-content">
-                <a href="#home" class="footer-brand">amanda.</a>
-                <p>Designed & built with curiosity and care.</p>
-                <p>© <span id="currentYear"></span> Amanda. All rights reserved.</p>
+
+            <div class="footer-top">
+
+                <a href="#home" class="footer-brand">
+                    amanda<span>.</span>
+                </a>
+
+                <p>
+                    Designed with curiosity. Built with purpose.
+                </p>
+
+                <a href="#home" class="footer-back">
+                    BACK TO TOP ↑
+                </a>
+
             </div>
+
+            <div class="footer-bottom">
+
+                <span>
+                    © <span id="currentYear"></span> Amanda.
+                    All rights reserved.
+                </span>
+
+                <span>MADE WITH CREATIVITY IN SINGAPORE ✳</span>
+
+            </div>
+
         </div>
+
     </footer>
 
 
-    <!-- Back to top -->
+    <!-- BACK TO TOP BUTTON -->
+
     <button id="backToTop" aria-label="Back to top">
         <i class="bi bi-arrow-up"></i>
     </button>
 
 
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- BOOTSTRAP JAVASCRIPT -->
 
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- CUSTOM JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>
