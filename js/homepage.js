@@ -1,33 +1,11 @@
 
-/* =====================================================
-   AMANDA'S PORTFOLIO
-   Interactive JavaScript
-===================================================== */
+document.addEventListener("DOMContentLoaded", function () {
 
-document.addEventListener("DOMContentLoaded", () => {
+    console.log("Amanda's portfolio JavaScript loaded.");
 
-    /* =========================================
-       1. PRELOADER
-    ========================================= */
-
-    const preloader = document.getElementById("preloader");
-
-    document.body.classList.add("loading");
-
-    window.addEventListener("load", () => {
-        setTimeout(() => {
-            if (preloader) {
-                preloader.classList.add("hide");
-            }
-
-            document.body.classList.remove("loading");
-        }, 600);
-    });
-
-
-    /* =========================================
-       2. AUTOMATIC FOOTER YEAR
-    ========================================= */
+    // =========================================
+    // 1. FOOTER YEAR
+    // =========================================
 
     const currentYear = document.getElementById("currentYear");
 
@@ -36,190 +14,71 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =========================================
-       3. NAVBAR SCROLL EFFECT
-    ========================================= */
+    // =========================================
+    // 2. NAVIGATION SCROLL EFFECT
+    // =========================================
 
-    const navbar = document.getElementById("siteNavbar");
+    const navbar = document.querySelector(".portfolio-nav");
 
     function updateNavbar() {
-
         if (!navbar) return;
 
-        if (window.scrollY > 50) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
-
+        navbar.classList.toggle("scrolled", window.scrollY > 50);
     }
 
     window.addEventListener("scroll", updateNavbar);
-
     updateNavbar();
 
 
-    /* =========================================
-       4. SCROLL REVEAL ANIMATIONS
-    ========================================= */
-
-    const revealElements = document.querySelectorAll("[data-reveal]");
-
-    if ("IntersectionObserver" in window) {
-
-        const revealObserver = new IntersectionObserver(
-            (entries, observer) => {
-
-                entries.forEach(entry => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("revealed");
-
-                        observer.unobserve(entry.target);
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.12,
-                rootMargin: "0px 0px -40px 0px"
-            }
-        );
-
-        revealElements.forEach(element => {
-            revealObserver.observe(element);
-        });
-
-    } else {
-
-        // Fallback for browsers without IntersectionObserver
-        revealElements.forEach(element => {
-            element.classList.add("revealed");
-        });
-
-    }
-
-
-    /* =========================================
-       5. PROJECT CATEGORY FILTER
-    ========================================= */
-
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const projectItems = document.querySelectorAll(".project-item");
-
-    filterButtons.forEach(button => {
-
-        button.addEventListener("click", () => {
-
-            // Remove active state from every button
-            filterButtons.forEach(btn => {
-                btn.classList.remove("active");
-            });
-
-            // Activate clicked button
-            button.classList.add("active");
-
-            const selectedCategory = button.dataset.filter;
-
-            projectItems.forEach(project => {
-
-                const projectCategory = project.dataset.category;
-
-                const shouldShow =
-                    selectedCategory === "all" ||
-                    selectedCategory === projectCategory;
-
-                if (shouldShow) {
-
-                    project.classList.remove("hide");
-
-                    const card = project.querySelector("[data-reveal]");
-
-                    if (card) {
-                        card.classList.add("revealed");
-                    }
-
-                } else {
-
-                    project.classList.add("hide");
-
-                }
-
-            });
-
-        });
-
-    });
-
-
-    /* =========================================
-       6. MOBILE NAVIGATION AUTO-CLOSE
-    ========================================= */
-
-    const navbarContent = document.getElementById("navbarContent");
-
-    const navbarLinks = document.querySelectorAll(
-        "#navbarContent .nav-link, #navbarContent .nav-contact"
-    );
-
-    navbarLinks.forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            if (
-                window.innerWidth < 992 &&
-                navbarContent &&
-                navbarContent.classList.contains("show")
-            ) {
-
-                const collapse = bootstrap.Collapse.getOrCreateInstance(
-                    navbarContent
-                );
-
-                collapse.hide();
-
-            }
-
-        });
-
-    });
-
-
-    /* =========================================
-       7. ACTIVE NAVIGATION HIGHLIGHT
-    ========================================= */
-
-    const sections = document.querySelectorAll("main section[id]");
+    // =========================================
+    // 3. MOBILE NAVIGATION
+    // =========================================
 
     const navLinks = document.querySelectorAll(
-        ".site-navbar .nav-link"
+        ".portfolio-nav .nav-link"
     );
+
+    const navMenu = document.getElementById("portfolioNav");
+
+    navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+
+            if (
+                navMenu &&
+                navMenu.classList.contains("show") &&
+                window.bootstrap
+            ) {
+                window.bootstrap.Collapse
+                    .getOrCreateInstance(navMenu)
+                    .hide();
+            }
+
+        });
+    });
+
+
+    // =========================================
+    // 4. ACTIVE NAVIGATION
+    // =========================================
+
+    const sections = document.querySelectorAll("main section[id]");
 
     if ("IntersectionObserver" in window) {
 
         const sectionObserver = new IntersectionObserver(
-            entries => {
+            function (entries) {
 
-                entries.forEach(entry => {
+                entries.forEach(function (entry) {
 
                     if (entry.isIntersecting) {
 
-                        const sectionId = entry.target.id;
+                        navLinks.forEach(function (link) {
 
-                        navLinks.forEach(link => {
-
-                            link.classList.remove("active");
-
-                            if (
-                                link.getAttribute("href") === `#${sectionId}`
-                            ) {
-
-                                link.classList.add("active");
-
-                            }
+                            link.classList.toggle(
+                                "active",
+                                link.getAttribute("href") ===
+                                "#" + entry.target.id
+                            );
 
                         });
 
@@ -229,91 +88,274 @@ document.addEventListener("DOMContentLoaded", () => {
 
             },
             {
-                rootMargin: "-35% 0px -55% 0px"
+                rootMargin: "-30% 0px -60% 0px"
             }
         );
 
-        sections.forEach(section => {
+        sections.forEach(function (section) {
             sectionObserver.observe(section);
         });
 
     }
 
 
-    /* =========================================
-       8. BACK TO TOP BUTTON
-    ========================================= */
+    // =========================================
+    // 5. BACK TO TOP
+    // =========================================
 
-    const backToTop = document.getElementById("backToTop");
+    const backToTop = document.querySelector(".back-to-top");
 
     function updateBackToTop() {
 
         if (!backToTop) return;
 
-        if (window.scrollY > 450) {
-
-            backToTop.classList.add("show");
-
-        } else {
-
-            backToTop.classList.remove("show");
-
-        }
-
+        backToTop.classList.toggle("show", window.scrollY > 400);
     }
 
     window.addEventListener("scroll", updateBackToTop);
-
     updateBackToTop();
 
-    if (backToTop) {
 
-        backToTop.addEventListener("click", () => {
+    // =========================================
+    // 6. SCROLL REVEAL
+    // =========================================
 
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
+    const revealElements = document.querySelectorAll(
+        ".hero-section, .intro-strip, .project-card, " +
+        ".about-section, .skill-card, .contact-section"
+    );
+
+    if ("IntersectionObserver" in window) {
+
+        const revealObserver = new IntersectionObserver(
+            function (entries, observer) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("revealed");
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+        revealElements.forEach(function (element) {
+            element.classList.add("reveal");
+            revealObserver.observe(element);
+        });
+
+    } else {
+        revealElements.forEach(function (element) {
+            element.classList.add("revealed");
+        });
+    }
+
+
+    // =========================================
+    // 7. PROJECT CAROUSEL
+    // =========================================
+
+    const carousel = document.getElementById("projectCarousel");
+
+    if (carousel) {
+
+        const slides = Array.from(
+            carousel.querySelectorAll(".project-slide")
+        );
+
+        const dots = Array.from(
+            carousel.querySelectorAll(".carousel-dot")
+        );
+
+        const previousButton = document.getElementById("prevProject");
+        const nextButton = document.getElementById("nextProject");
+        const counter = document.getElementById("carouselCounter");
+
+        let currentSlide = 0;
+        let carouselTimer = null;
+
+        const delay = 4000;
+
+        function showProject(index) {
+
+            if (slides.length === 0) return;
+
+            currentSlide = (index + slides.length) % slides.length;
+
+            slides.forEach(function (slide, i) {
+
+                const isActive = i === currentSlide;
+
+                slide.classList.toggle("active", isActive);
+                slide.setAttribute("aria-hidden", String(!isActive));
+
+            });
+
+            dots.forEach(function (dot, i) {
+
+                const isActive = i === currentSlide;
+
+                dot.classList.toggle("active", isActive);
+                dot.setAttribute("aria-pressed", String(isActive));
+
+            });
+
+            if (counter) {
+                counter.textContent =
+                    String(currentSlide + 1).padStart(2, "0") +
+                    " / " +
+                    String(slides.length).padStart(2, "0");
+            }
+
+        }
+
+
+        function nextProject() {
+            showProject(currentSlide + 1);
+        }
+
+
+        function previousProject() {
+            showProject(currentSlide - 1);
+        }
+
+
+        function stopCarousel() {
+
+            if (carouselTimer !== null) {
+                clearInterval(carouselTimer);
+                carouselTimer = null;
+            }
+
+        }
+
+
+        function startCarousel() {
+
+            stopCarousel();
+
+            if (
+                !window.matchMedia(
+                    "(prefers-reduced-motion: reduce)"
+                ).matches &&
+                !document.hidden
+            ) {
+                carouselTimer = setInterval(nextProject, delay);
+            }
+
+        }
+
+
+        // Previous button
+        if (previousButton) {
+
+            previousButton.addEventListener("click", function () {
+                previousProject();
+                startCarousel();
+            });
+
+        }
+
+
+        // Next button
+        if (nextButton) {
+
+            nextButton.addEventListener("click", function () {
+                nextProject();
+                startCarousel();
+            });
+
+        }
+
+
+        // Indicator dots
+        dots.forEach(function (dot, index) {
+
+            dot.addEventListener("click", function () {
+                showProject(index);
+                startCarousel();
             });
 
         });
 
+
+        // Pause while hovering
+        carousel.addEventListener("mouseenter", stopCarousel);
+        carousel.addEventListener("mouseleave", startCarousel);
+
+
+        // Pause while using keyboard controls
+        carousel.addEventListener("focusin", stopCarousel);
+
+        carousel.addEventListener("focusout", function (event) {
+
+            if (!carousel.contains(event.relatedTarget)) {
+                startCarousel();
+            }
+
+        });
+
+
+        // Pause when browser tab is hidden
+        document.addEventListener("visibilitychange", function () {
+
+            if (document.hidden) {
+                stopCarousel();
+            } else {
+                startCarousel();
+            }
+
+        });
+
+
+        // Initialise carousel
+        if (slides.length > 0) {
+
+            showProject(0);
+            startCarousel();
+
+        }
+
+        console.log("Project carousel initialised:", slides.length, "slides.");
+
+    } else {
+
+        console.error("Project carousel not found. Check the projectCarousel ID.");
+
     }
 
 
-    /* =========================================
-       9. CLOSE MOBILE MENU WHEN RESIZING
-    ========================================= */
+    // =========================================
+    // 8. PROJECT HOVER EFFECT
+    // =========================================
 
-    window.addEventListener("resize", () => {
+    const projectCards = document.querySelectorAll(".project-slide");
 
-        if (
-            window.innerWidth >= 992 &&
-            navbarContent &&
-            navbarContent.classList.contains("show")
-        ) {
+    projectCards.forEach(function (card) {
 
-            const collapse = bootstrap.Collapse.getOrCreateInstance(
-                navbarContent
-            );
+        const visual = card.querySelector(".carousel-visual");
 
-            collapse.hide();
+        if (!visual) return;
 
-        }
+        visual.addEventListener("mouseenter", function () {
+            card.classList.add("project-hover");
+        });
+
+        visual.addEventListener("mouseleave", function () {
+            card.classList.remove("project-hover");
+        });
 
     });
 
 
-    /* =========================================
-       10. CONSOLE MESSAGE
-    ========================================= */
-
-    console.log(
-        "%cWelcome to Amanda's Portfolio!",
-        "color: #C99D98; font-size: 18px; font-weight: bold;"
-    );
-
-    console.log(
-        "Designed with creativity and built with curiosity."
-    );
+    console.log("Portfolio interactions initialised successfully.");
 
 });
