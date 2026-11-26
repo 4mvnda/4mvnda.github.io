@@ -1,576 +1,531 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Amanda | UI/UX Designer & Developer</title>
 
-    <meta name="description"
-        content="Amanda's portfolio showcasing UI/UX design, web development, creative projects and digital experiences.">
+    <meta
+      name="description"
+      content="Amanda's portfolio showcasing UI/UX design, web development, creative projects and digital experiences."
+    />
 
-    <meta name="theme-color" content="#252525">
+    <meta name="theme-color" content="#252525" />
 
     <!-- Bootstrap 5 -->
     <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap Icons -->
     <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg portfolio-nav">
-        <div class="container-fluid">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#home">AMANDA.</a>
 
-            <a class="navbar-brand" href="#home">AMANDA.</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#portfolioNav"
+          aria-controls="portfolioNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list"></i>
+        </button>
 
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#portfolioNav"
-                aria-controls="portfolioNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+        <div class="collapse navbar-collapse" id="portfolioNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">HOME</a>
+            </li>
 
-                <i class="bi bi-list"></i>
-            </button>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">PROJECTS</a>
+            </li>
 
-            <div class="collapse navbar-collapse" id="portfolioNav">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">ABOUT ME</a>
+            </li>
 
-                <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">SKILLS</a>
+            </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">HOME</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">PROJECTS</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">ABOUT ME</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">SKILLS</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">CONTACT</a>
-                    </li>
-
-                </ul>
-            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">CONTACT</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-
     <main>
-
-        <!-- HERO SECTION -->
-        <section id="home" class="hero-section">
-
-            <div class="hero-photo">
-
-                <!-- Replace with your own portrait -->
-                <div class="hero-photo-placeholder">
-                    <i class="bi bi-person"></i>
-                    <span>YOUR PHOTO HERE</span>
-                </div>
-
-            </div>
-
-            <div class="hero-content">
-
-                <p class="hero-eyebrow">PORTFOLIO 2026 — 2027</p>
-
-                <h1>
-                    ANG<br>
-                    <span>THANCHANOK.</span>
-                </h1>
-
-                <p class="hero-role">
-                    UI/UX DESIGNER <span>×</span> FULL-STACK DEVELOPER
-                </p>
-
-                <p class="hero-description">
-                    A little creativity in progress.
-                    Exploring the intersection of design,
-                    technology and meaningful digital experiences.
-                </p>
-
-                <a href="#projects" class="hero-button">
-                    EXPLORE MY WORK
-                    <i class="bi bi-arrow-up-right"></i>
-                </a>
-
-                <div class="hero-socials">
-
-                    <a href="https://github.com/4mvnda"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="GitHub">
-                        <i class="bi bi-github"></i>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/thanchanok-ang"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="LinkedIn">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-
-                    <a href="mailto:thanchanok05.25@ichat.sp.edu.sg"
-                       aria-label="Email">
-                        <i class="bi bi-envelope"></i>
-                    </a>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- INTRODUCTION STRIP -->
-        <section class="intro-strip">
-
-            <div>
-                <span class="intro-number">01</span>
-                <h2>DESIGN WITH PURPOSE.</h2>
-            </div>
-
-            <div>
-                <span class="intro-number">02</span>
-                <h2>BUILD WITH CREATIVITY.</h2>
-            </div>
-
-            <div>
-                <span class="intro-number">03</span>
-                <h2>CREATE WITH IMPACT.</h2>
-            </div>
-
-        </section>
-
-
-<section id="projects" class="projects-section">
-
-    <div class="section-heading">
-        <div>
-            <p class="section-eyebrow">A SELECTION OF MY WORK</p>
-            <h2>FEATURED <span>PROJECTS.</span></h2>
+      <!-- HERO SECTION -->
+      <section id="home" class="hero-section">
+        <div class="hero-photo">
+          <img
+            src="assets/images/WhatsApp Image 2026-11-27 at 12.43.43 AM.jpeg"
+            alt="Portrait of Amanda"
+            class="hero-profile-image"
+          />
         </div>
 
-        <p class="section-description">
-            Explore my work across UI/UX design,
-            software development and creative projects.
-        </p>
-    </div>
+        <div class="hero-content">
+          <p class="hero-eyebrow">PORTFOLIO 2026 — 2027</p>
 
-    <div class="project-carousel" id="projectCarousel">
+          <h1>
+            ANG<br />
+            <span>THANCHANOK.</span>
+          </h1>
 
-        <div class="project-slides">
+          <p class="hero-role">
+            UI/UX DESIGNER <span>×</span> FULL-STACK DEVELOPER
+          </p>
 
+          <p class="hero-description">
+            A little creativity in progress. Exploring the intersection of
+            design, technology and meaningful digital experiences.
+          </p>
+
+          <a href="#projects" class="hero-button">
+            EXPLORE MY WORK
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+
+          <div class="hero-socials">
+            <a
+              href="https://github.com/4mvnda"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i class="bi bi-github"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/thanchanok-ang"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+
+            <a href="mailto:thanchanok05.25@ichat.sp.edu.sg" aria-label="Email">
+              <i class="bi bi-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTRODUCTION STRIP -->
+      <section class="intro-strip">
+        <div>
+          <span class="intro-number">01</span>
+          <h2>DESIGN WITH PURPOSE.</h2>
+        </div>
+
+        <div>
+          <span class="intro-number">02</span>
+          <h2>BUILD WITH CREATIVITY.</h2>
+        </div>
+
+        <div>
+          <span class="intro-number">03</span>
+          <h2>CREATE WITH IMPACT.</h2>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-eyebrow">A SELECTION OF MY WORK</p>
+            <h2>FEATURED <span>PROJECTS.</span></h2>
+          </div>
+
+          <p class="section-description">
+            Explore my work across UI/UX design, software development and
+            creative projects.
+          </p>
+        </div>
+
+        <div class="project-carousel" id="projectCarousel">
+          <div class="project-slides">
             <!-- SLIDE 1: COLLAB AI -->
             <article class="project-slide active">
-                <a href="https://www.figma.com/proto/BvGx28g3ckecLWZxyU8l3w/WireFrame?node-id=223-1160&amp;starting-point-node-id=223%3A1160&amp;t=qgUIFrIN8a9iHKR3-1"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="carousel-visual collab-visual">
+              <a
+                href="https://www.figma.com/proto/BvGx28g3ckecLWZxyU8l3w/WireFrame?node-id=223-1160&starting-point-node-id=223%3A1160&t=qgUIFrIN8a9iHKR3-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="carousel-visual collab-visual"
+              >
+                <span class="project-index">01 / 05</span>
 
-                    <span class="project-index">01 / 05</span>
+                <img
+                  src="assets/images/collabai_project_collage_16x9.png"
+                  alt="Collab AI application interface showcase"
+                  class="project-image"
+                />
 
-                    <div class="project-artwork">
-                        <i class="bi bi-people"></i>
-                        <span>COLLAB AI</span>
-                        <small>Better ideas, together.</small>
-                    </div>
+                <span class="project-view">
+                  VIEW PROJECT <i class="bi bi-arrow-up-right"></i>
+                </span>
+              </a>
 
-                    <span class="project-view">
-                        VIEW PROJECT <i class="bi bi-arrow-up-right"></i>
-                    </span>
-                </a>
-
-                <div class="carousel-info">
-                    <div>
-                        <p class="project-category">WEB DEVELOPMENT · AI</p>
-                        <h3>Collab AI</h3>
-                        <p>An AI-assisted collaboration platform designed to improve group project organisation and productivity.</p>
-                    </div>
-                    <span class="project-year">2026</span>
+              <div class="carousel-info">
+                <div>
+                  <p class="project-category">WEB DEVELOPMENT · AI</p>
+                  <h3>Collab AI</h3>
+                  <p>
+                    An AI-assisted collaboration platform designed to improve
+                    group project organisation and productivity.
+                  </p>
                 </div>
+                <span class="project-year">2026</span>
+              </div>
             </article>
-
 
             <!-- SLIDE 2: SURPLUS GO -->
             <article class="project-slide">
-                <a href="projects/surplus-go.html"
-                   class="carousel-visual surplus-visual">
+              <div
+                href="YOUR_SURPLUSGO_PROJECT_LINK"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="carousel-visual surplus-visual"
+              >
+                <span class="project-index">02 / 05</span>
 
-                    <span class="project-index">02 / 05</span>
+                <img
+                  src="assets/images/SurplusGo Sustainable Food App Showcase.png"
+                  alt="SurplusGo website interface showcase"
+                  class="project-image"
+                />
 
-                    <div class="project-artwork">
-                        <i class="bi bi-basket2"></i>
-                        <span>SURPLUS GO</span>
-                        <small>Good food. Less waste.</small>
-                    </div>
+                <span class="project-view">
+                  VIEW PROJECT <i class="bi bi-arrow-up-right"></i>
+                </span>
+              </div>
 
-                    <span class="project-view">
-                        VIEW PROJECT <i class="bi bi-arrow-up-right"></i>
-                    </span>
-                </a>
-
-                <div class="carousel-info">
-                    <div>
-                        <p class="project-category">UI/UX · DEVELOPMENT</p>
-                        <h3>Surplus Go</h3>
-                        <p>A digital concept focused on reducing food waste and improving access to surplus food.</p>
-                    </div>
-                    <span class="project-year">2026</span>
+              <div class="carousel-info">
+                <div>
+                  <p class="project-category">WEB DEVELOPMENT · UI/UX</p>
+                  <h3>SurplusGo</h3>
+                  <p>
+                    A food marketplace platform connecting consumers with local
+                    vendors to purchase surplus food at affordable prices while
+                    reducing food waste.
+                  </p>
                 </div>
+                <span class="project-year">2026</span>
+              </div>
             </article>
-
 
             <!-- SLIDE 3: FAIRY GAME -->
             <article class="project-slide">
-                <a href="projects/fairy-game.html"
-                   class="carousel-visual fairy-visual">
+              <a
+                href="https://youtu.be/1G8Ythq1HTs"
+                class="carousel-visual fairy-visual"
+              >
+                <span class="project-index">03 / 05</span>
 
-                    <span class="project-index">03 / 05</span>
+                <img
+                  src="assets/images/magic_adventure_collage_smoother_16x9.png"
+                  alt="SurplusGo website interface showcase"
+                  class="project-image"
+                />
 
-                    <div class="project-artwork">
-                        <i class="bi bi-stars"></i>
-                        <span>FAIRY GAME</span>
-                        <small>A little world of magic.</small>
-                    </div>
+                <span class="project-view">
+                  VIEW PROJECT <i class="bi bi-arrow-up-right"></i>
+                </span>
+              </a>
 
-                    <span class="project-view">
-                        VIEW PROJECT <i class="bi bi-arrow-up-right"></i>
-                    </span>
-                </a>
-
-                <div class="carousel-info">
-                    <div>
-                        <p class="project-category">GAME DEVELOPMENT</p>
-                        <h3>Fairy Game</h3>
-                        <p>An interactive game project showcasing creativity, game mechanics and development.</p>
-                    </div>
-                    <span class="project-year">2026</span>
+              <div class="carousel-info">
+                <div>
+                  <p class="project-category">GAME DEVELOPMENT</p>
+                  <h3>Magic Adventure</h3>
+                  <p>
+                    An interactive game project showcasing creativity, game
+                    mechanics and development.
+                  </p>
                 </div>
+                <span class="project-year">2026</span>
+              </div>
             </article>
-
 
             <!-- SLIDE 4: PHOTOSHOP -->
             <article class="project-slide">
-                <a href="projects/photoshop-portfolio.html"
-                   class="carousel-visual photoshop-visual">
+              <a
+                href="assets/files/CA03 – Webpage Design – Personal Portfolio.zip"
+                download="photoshop-portfolio.zip"
+                class="carousel-visual photoshop-visual"
+              >
+                <span class="project-index">04 / 05</span>
 
-                    <span class="project-index">04 / 05</span>
+                <img
+                  src="assets/images/amanda_portfolio_collage_16x9.png"
+                  alt="SurplusGo website interface showcase"
+                  class="project-image"
+                />
 
-                    <div class="project-artwork">
-                        <i class="bi bi-images"></i>
-                        <span>CREATIVE WORKS</span>
-                        <small>Designed in Photoshop.</small>
-                    </div>
+                <span class="project-view">
+                  DOWNLOAD PROJECT <i class="bi bi-download"></i>
+                </span>
+              </a>
 
-                    <span class="project-view">
-                        VIEW PROJECT <i class="bi bi-arrow-up-right"></i>
-                    </span>
-                </a>
-
-                <div class="carousel-info">
-                    <div>
-                        <p class="project-category">GRAPHIC DESIGN</p>
-                        <h3>Photoshop Portfolio</h3>
-                        <p>A collection of creative compositions, image editing and graphic design experiments.</p>
-                    </div>
-                    <span class="project-year">2026</span>
+              <div class="carousel-info">
+                <div>
+                  <p class="project-category">GRAPHIC DESIGN</p>
+                  <h3>Photoshop Portfolio</h3>
+                  <p>
+                    A collection of creative compositions, image editing and
+                    graphic design experiments.
+                  </p>
                 </div>
+                <span class="project-year">2026</span>
+              </div>
             </article>
+          </div>
 
-
-            <!-- SLIDE 5: PAWSTORY -->
-            <article class="project-slide">
-                <a href="projects/pawstory.html"
-                   class="carousel-visual pawstory-visual">
-
-                    <span class="project-index">05 / 05</span>
-
-                    <div class="project-artwork">
-                        <i class="bi bi-bookmark-heart"></i>
-                        <span>PAWSTORY</span>
-                        <small>Every paw has a story.</small>
-                    </div>
-
-                    <span class="project-view">
-                        VIEW PROJECT <i class="bi bi-arrow-up-right"></i>
-                    </span>
-                </a>
-
-                <div class="carousel-info">
-                    <div>
-                        <p class="project-category">UI/UX · MOBILE APP DESIGN</p>
-                        <h3>PawStory</h3>
-                        <p>An animal welfare and community app concept focused on meaningful connections.</p>
-                    </div>
-                    <span class="project-year">2026</span>
-                </div>
-            </article>
-
-        </div>
-
-
-        <!-- CAROUSEL CONTROLS -->
-        <div class="carousel-controls">
-
+          <!-- CAROUSEL CONTROLS -->
+          <div class="carousel-controls">
             <div class="carousel-dots">
-                <button class="carousel-dot active" data-slide="0" aria-label="Show Collab AI"></button>
-                <button class="carousel-dot" data-slide="1" aria-label="Show Surplus Go"></button>
-                <button class="carousel-dot" data-slide="2" aria-label="Show Fairy Game"></button>
-                <button class="carousel-dot" data-slide="3" aria-label="Show Photoshop Portfolio"></button>
-                <button class="carousel-dot" data-slide="4" aria-label="Show PawStory"></button>
+              <button
+                class="carousel-dot active"
+                data-slide="0"
+                aria-label="Show Collab AI"
+              ></button>
+              <button
+                class="carousel-dot"
+                data-slide="1"
+                aria-label="Show Surplus Go"
+              ></button>
+              <button
+                class="carousel-dot"
+                data-slide="2"
+                aria-label="Show Fairy Game"
+              ></button>
+              <button
+                class="carousel-dot"
+                data-slide="3"
+                aria-label="Show Photoshop Portfolio"
+              ></button>
+              <button
+                class="carousel-dot"
+                data-slide="4"
+                aria-label="Show PawStory"
+              ></button>
             </div>
 
             <div class="carousel-arrows">
-                <button id="prevProject" aria-label="Previous project">
-                    <i class="bi bi-arrow-left"></i>
-                </button>
+              <button id="prevProject" aria-label="Previous project">
+                <i class="bi bi-arrow-left"></i>
+              </button>
 
-                <button id="nextProject" aria-label="Next project">
-                    <i class="bi bi-arrow-right"></i>
-                </button>
+              <button id="nextProject" aria-label="Next project">
+                <i class="bi bi-arrow-right"></i>
+              </button>
             </div>
+          </div>
 
+          <p class="carousel-counter" id="carouselCounter">01 / 05</p>
+        </div>
+      </section>
+
+      <!-- ABOUT ME SECTION -->
+      <section id="about" class="about-section">
+        <div class="about-heading">
+          <p class="section-eyebrow">GET TO KNOW ME</p>
+          <h2>A LITTLE ABOUT <span>ME.</span></h2>
         </div>
 
-        <p class="carousel-counter" id="carouselCounter">01 / 05</p>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>
+              Hey, I'm Amanda.
+              <span>Nice to meet you!</span>
+            </h3>
 
-    </div>
+            <p>
+              I am an aspiring UI/UX Designer and Full-Stack Developer currently
+              pursuing a Diploma in Information Technology at Singapore
+              Polytechnic.
+            </p>
 
-</section>
+            <p>
+              I enjoy combining creativity and technology to create digital
+              experiences that are functional, intuitive and visually engaging.
+            </p>
 
+            <p>
+              I'm always curious, continuously learning and looking for
+              opportunities to turn ideas into meaningful solutions.
+            </p>
+          </div>
 
-        <!-- ABOUT ME SECTION -->
-        <section id="about" class="about-section">
-
-            <div class="about-heading">
-                <p class="section-eyebrow">GET TO KNOW ME</p>
-                <h2>A LITTLE ABOUT <span>ME.</span></h2>
+          <div class="about-details">
+            <div class="detail-item">
+              <span>01</span>
+              <div>
+                <h4>EDUCATION</h4>
+                <p>Diploma in Information Technology</p>
+                <small>Singapore Polytechnic</small>
+              </div>
             </div>
 
-            <div class="about-content">
-
-                <div class="about-text">
-                    <h3>
-                        Hey, I'm Amanda.
-                        <span>Nice to meet you!</span>
-                    </h3>
-
-                    <p>
-                        I am an aspiring UI/UX Designer and
-                        Full-Stack Developer currently pursuing
-                        a Diploma in Information Technology
-                        at Singapore Polytechnic.
-                    </p>
-
-                    <p>
-                        I enjoy combining creativity and technology
-                        to create digital experiences that are
-                        functional, intuitive and visually engaging.
-                    </p>
-
-                    <p>
-                        I'm always curious, continuously learning
-                        and looking for opportunities to turn ideas
-                        into meaningful solutions.
-                    </p>
-
-                </div>
-
-                <div class="about-details">
-
-                    <div class="detail-item">
-                        <span>01</span>
-                        <div>
-                            <h4>EDUCATION</h4>
-                            <p>Diploma in Information Technology</p>
-                            <small>Singapore Polytechnic</small>
-                        </div>
-                    </div>
-
-                    <div class="detail-item">
-                        <span>02</span>
-                        <div>
-                            <h4>INTERESTS</h4>
-                            <p>UI/UX · Development · Creative Design</p>
-                        </div>
-                    </div>
-
-                    <div class="detail-item">
-                        <span>03</span>
-                        <div>
-                            <h4>CURRENTLY</h4>
-                            <p>Learning, designing and building.</p>
-                        </div>
-                    </div>
-
-                </div>
-
+            <div class="detail-item">
+              <span>02</span>
+              <div>
+                <h4>INTERESTS</h4>
+                <p>UI/UX · Development · Creative Design</p>
+              </div>
             </div>
 
-        </section>
-
-
-        <!-- SKILLS SECTION -->
-        <section id="skills" class="skills-section">
-
-            <div class="section-heading">
-                <div>
-                    <p class="section-eyebrow">WHAT I WORK WITH</p>
-                    <h2>MY <span>TOOLKIT.</span></h2>
-                </div>
+            <div class="detail-item">
+              <span>03</span>
+              <div>
+                <h4>CURRENTLY</h4>
+                <p>Learning, designing and building.</p>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="skills-grid">
+      <!-- SKILLS SECTION -->
+      <section id="skills" class="skills-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-eyebrow">WHAT I WORK WITH</p>
+            <h2>MY <span>TOOLKIT.</span></h2>
+          </div>
+        </div>
 
-                <div class="skill-card">
-                    <i class="bi bi-brush"></i>
-                    <h3>UI/UX DESIGN</h3>
-                    <p>Figma · UI Design · UX Design</p>
-                </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="bi bi-brush"></i>
+            <h3>UI/UX DESIGN</h3>
+            <p>Figma · UI Design · UX Design</p>
+          </div>
 
-                <div class="skill-card">
-                    <i class="bi bi-code-slash"></i>
-                    <h3>FRONT-END</h3>
-                    <p>HTML · CSS · JavaScript · Bootstrap</p>
-                </div>
+          <div class="skill-card">
+            <i class="bi bi-code-slash"></i>
+            <h3>FRONT-END</h3>
+            <p>HTML · CSS · JavaScript · Bootstrap</p>
+          </div>
 
-                <div class="skill-card">
-                    <i class="bi bi-server"></i>
-                    <h3>BACK-END</h3>
-                    <p>Node.js · RESTful APIs</p>
-                </div>
+          <div class="skill-card">
+            <i class="bi bi-server"></i>
+            <h3>BACK-END</h3>
+            <p>Node.js · RESTful APIs</p>
+          </div>
 
-                <div class="skill-card">
-                    <i class="bi bi-database"></i>
-                    <h3>DATABASE</h3>
-                    <p>SQL · MySQL · PostgreSQL</p>
-                </div>
+          <div class="skill-card">
+            <i class="bi bi-database"></i>
+            <h3>DATABASE</h3>
+            <p>SQL · MySQL · PostgreSQL</p>
+          </div>
 
-                <div class="skill-card">
-                    <i class="bi bi-image"></i>
-                    <h3>CREATIVE DESIGN</h3>
-                    <p>Photoshop · Illustrator</p>
-                </div>
+          <div class="skill-card">
+            <i class="bi bi-image"></i>
+            <h3>CREATIVE DESIGN</h3>
+            <p>Photoshop · Illustrator</p>
+          </div>
 
-                <div class="skill-card">
-                    <i class="bi bi-git"></i>
-                    <h3>DEVELOPMENT TOOLS</h3>
-                    <p>Git · GitHub · Postman · CI/CD</p>
-                </div>
+          <div class="skill-card">
+            <i class="bi bi-git"></i>
+            <h3>DEVELOPMENT TOOLS</h3>
+            <p>Git · GitHub · Postman · CI/CD</p>
+          </div>
+        </div>
+      </section>
 
-            </div>
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="contact-section">
+        <div class="contact-content">
+          <p class="section-eyebrow">HAVE A PROJECT IN MIND?</p>
 
-        </section>
+          <h2>
+            LET'S CREATE<br />
+            SOMETHING <span>MEANINGFUL.</span>
+          </h2>
 
+          <p>
+            I'm always open to new opportunities, collaborations and
+            conversations.
+          </p>
 
-        <!-- CONTACT SECTION -->
-        <section id="contact" class="contact-section">
+          <a
+            href="mailto:thanchanok05.25@ichat.sp.edu.sg"
+            class="contact-button"
+          >
+            GET IN TOUCH
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
 
-            <div class="contact-content">
+        <div class="contact-socials">
+          <a
+            href="https://github.com/4mvnda"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GITHUB
+          </a>
 
-                <p class="section-eyebrow">HAVE A PROJECT IN MIND?</p>
+          <a
+            href="https://www.linkedin.com/in/thanchanok-ang"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LINKEDIN
+          </a>
 
-                <h2>
-                    LET'S CREATE<br>
-                    SOMETHING <span>MEANINGFUL.</span>
-                </h2>
-
-                <p>
-                    I'm always open to new opportunities,
-                    collaborations and conversations.
-                </p>
-
-                <a href="mailto:thanchanok05.25@ichat.sp.edu.sg"
-                   class="contact-button">
-                    GET IN TOUCH
-                    <i class="bi bi-arrow-up-right"></i>
-                </a>
-
-            </div>
-
-            <div class="contact-socials">
-
-                <a href="https://github.com/4mvnda"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    GITHUB
-                </a>
-
-                <a href="https://www.linkedin.com/in/thanchanok-ang"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    LINKEDIN
-                </a>
-
-                <a href="mailto:thanchanok05.25@ichat.sp.edu.sg">
-                    EMAIL
-                </a>
-
-            </div>
-
-        </section>
-
+          <a href="mailto:thanchanok05.25@ichat.sp.edu.sg"> EMAIL </a>
+        </div>
+      </section>
     </main>
-
 
     <!-- FOOTER -->
     <footer class="portfolio-footer">
+      <a href="#home" class="footer-brand">AMANDA.</a>
 
-        <a href="#home" class="footer-brand">AMANDA.</a>
+      <p>Designed and developed with creativity.</p>
 
-        <p>
-            Designed and developed with creativity.
-        </p>
-
-        <p>
-            © <span id="currentYear"></span> Ang Thanchanok
-        </p>
-
+      <p>© <span id="currentYear"></span> Ang Thanchanok</p>
     </footer>
-
 
     <!-- BACK TO TOP -->
     <a href="#home" class="back-to-top" aria-label="Back to top">
-        <i class="bi bi-arrow-up"></i>
+      <i class="bi bi-arrow-up"></i>
     </a>
 
-
     <!-- Bootstrap JavaScript -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="js/homepage.js"></script>
-
-</body>
+  </body>
 </html>
